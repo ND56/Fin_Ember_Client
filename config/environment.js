@@ -52,7 +52,7 @@ module.exports = function (environment) {
   if (environment === 'production') {
     ENV.rootURL = '/Fin_Ember_Client'
     ENV.locationType = 'hash'
-    ENV.apiHost = 'https://fin-api.herokuapp.com/'
+    ENV.apiHost = 'https://fin-api.herokuapp.com'
   }
 
   return ENV;
