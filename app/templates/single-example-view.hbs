@@ -1,0 +1,11 @@
+<p>Example #: {{model.id}}</p>
+<p>Text: {{model.text}}</p>
+<p>Owner: {{model._owner.email}}</p>
+{{edit-example example=model
+               editExample='updateExample'}}
+<a class="trash" {{action 'deleteExample' model}}>{{fa-icon "trash" size="lg"}}</a>
+{{!-- ^^ ember install ember-font-awesome --}}
+{{!-- pass the model back to the route JS file --}}
+<br />
+<br />
+{{#link-to 'view-examples'}}Return{{/link-to}}

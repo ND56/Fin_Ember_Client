@@ -11,6 +11,8 @@
       <ul class="nav navbar-nav navbar-right">
         {{#if isAuthenticated}}
         <li>{{#link-to "change-password"}}Change Password{{/link-to}}</li>
+        <li>{{#link-to "create-example"}}Create Examples{{/link-to}}</li>
+        <li>{{#link-to "view-examples"}}View Examples{{/link-to}}</li>
         <li><a href="#" {{action "signOut"}}>Sign Out</a></li>
         {{else}}
         <li>{{#link-to "sign-up"}}Sign Up{{/link-to}}</li>
@@ -29,4 +31,11 @@
 
 <div class="col-md-8 col-md-offset-2">
   {{outlet}}
+  {{!-- my-application takes place of
+  application
+  application so application is parent
+  and all nested views get rendered here;
+  instead it being in the application route template--
+  like we've seen before, we have outlet in this--
+  child of application--}}
 </div>

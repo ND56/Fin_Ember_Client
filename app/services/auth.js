@@ -1,7 +1,13 @@
 import { bool } from '@ember/object/computed'
 import { storageFor } from 'ember-local-storage'
+// ^^ using this package, we can navigate away from a page
+// that data is still saved
+// that's why when we refresh our page, user is still signed in
+// user data gets cached
+// if we weren't using, when you come back, data is lost
 import Service, { inject as service } from '@ember/service'
 
+// incorporates ajax service
 export default Service.extend({
   ajax: service(),
   credentials: storageFor('auth'),

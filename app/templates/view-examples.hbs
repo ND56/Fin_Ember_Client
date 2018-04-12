@@ -1,0 +1,5 @@
+{{#each model as |example|}}
+  <p>Example #: {{#link-to 'single-example-view' example}}{{example.id}}{{/link-to}}</p>
+  {{!-- <p>Example #: {{example.id}}</p> --}}
+  {{!-- this syntax is specifically used for link-tos --}}
+{{/each}}

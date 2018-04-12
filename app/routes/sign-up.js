@@ -3,8 +3,15 @@ import { inject as service } from '@ember/service'
 import RSVP from 'rsvp'
 
 export default Route.extend({
+  // this is an actual file service
   auth: service(),
+  // this is a module; the way we use it is we use it
+  // as a service; this is specific to this ember module
+  // tho; it's in the docs
   flashMessages: service(),
+  // ^^ short hand for: flashMessages: service('flashMessages')
+  // ^^ bringing in and storing on this key
+  // service is a method that takes what service you want and brings it in
 
   model () {
     return RSVP.Promise.resolve({})

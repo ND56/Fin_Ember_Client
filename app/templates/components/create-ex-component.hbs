@@ -1,0 +1,16 @@
+<div class="form-group">
+  <label for="exampleText">Text</label>
+  {{input type="text"
+          class="form-control"
+          id="exampleText"
+          placeholder="Example text"
+          value=example.text}}
+</div>
+
+<button type="submit" class="btn btn-primary" {{action "submitExample"}}>
+  Create Example
+</button>
+
+<button class="btn btn-default" {{action "reset"}}>
+  Cancel
+</button>
